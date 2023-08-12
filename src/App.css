@@ -1,38 +1,107 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+ul {
+  list-style-type: none;
+}
+.image {
+  overflow: hidden;
+}
+img {
+  width: 7rem;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #61dafb;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+a {
+  text-decoration: none;
+}
+img:hover {
+  border: 2px solid #61dafb;
+  scale: 1.2;
+}
+.name {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bolder;
+  letter-spacing: 2.5px;
+  padding: 10px;
+}
+
+.list {
   text-align: center;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: white;
+  color: #61dafb;
+  width: 17rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.list:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  background-color: greenyellow;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.main {
+  background-color: royalblue;
+  min-width: 100%;
+  height: 100%;
+  padding-bottom: 2rem;
+}
+.title {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 2.5rem;
+  color: aliceblue;
+  font-weight: bold;
+  position: relative;
+}
+.underline {
+  width: 15%;
+  height: 4px;
+  background-color: white;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn {
+  padding: 0.2rem 2rem;
+  background-color: #61dafb;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 2rem;
+  transition: all 0.3s linear;
+  margin: 10px 0;
+}
+.btn:hover {
+  background-color: white;
+  color: #61dafb;
+}
+@media (min-width: 768px) {
+  .single-user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (min-width: 998px) {
+  .single-user {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.5rem;
   }
 }
